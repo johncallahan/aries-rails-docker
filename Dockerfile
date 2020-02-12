@@ -1,5 +1,6 @@
 # Development
-FROM ubuntu:16.04
+#FROM ubuntu:16.04
+FROM ruby:2.5
 
 RUN add-apt-repository ppa:brightbox/ruby-ng
 
