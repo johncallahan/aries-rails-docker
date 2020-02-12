@@ -65,16 +65,16 @@ RUN gem install rails -v 5.2.0
 
 # Add sovrin to sources.list
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CE7709D068DB5E88 && \
-    add-apt-repository "deb https://repo.sovrin.org/sdk/deb bionic master" && \
-    add-apt-repository "deb https://repo.sovrin.org/sdk/deb bionic stable" && \
-    add-apt-repository 'deb https://repo.sovrin.org/deb bionic master'
+    add-apt-repository "deb https://repo.sovrin.org/sdk/deb xenial master" && \
+    add-apt-repository "deb https://repo.sovrin.org/sdk/deb xenial stable" && \
+    add-apt-repository 'deb https://repo.sovrin.org/deb xenial master'
 
 #ARG LIBINDY_VER="1.6.7"
 #ARG LIBNULL_VER="1.6.7"
 
 RUN apt-get update && apt-get install -y \
-    libindy=1.11 \
-    libnullpay=1.11
+    libindy=1.8.1 \
+    libnullpay=1.8.1
 
 WORKDIR /
 
