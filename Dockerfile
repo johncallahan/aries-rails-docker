@@ -37,8 +37,8 @@ RUN apt-get update -y && apt-get install -y \
     vim
 
 # Install Nodejs 
-RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - \
-    && apt-get install -y nodejs
+#RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - \
+#    && apt-get install -y nodejs
 
 # Install Rust
 # Install Rust
@@ -58,9 +58,9 @@ RUN curl -fsOSL $RUST_DOWNLOAD_URL \
 RUN cargo install cargo-deb
 
 # fpm for deb packaging of npm
-RUN gem install fpm
+#RUN gem install fpm
 RUN gem install rails -v 5.2.0
-RUN apt-get install rpm -y
+#RUN apt-get install rpm -y
 
 # Add sovrin to sources.list
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CE7709D068DB5E88 && \
