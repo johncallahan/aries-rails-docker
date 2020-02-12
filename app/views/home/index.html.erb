@@ -1,1 +1,9 @@
-<h1>Hello</h1>
+<%= form_for :anything, url: "home/create" do |form| %>
+  <%= form.submit "Generate" %>
+<% end  %>
+
+<%= form_for :anything, url: "home/lookup" do |form| %>
+  <%= form.text_field :did %>
+  <%= form.submit "Lookup" %>
+<% end  %>
+

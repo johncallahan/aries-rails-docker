@@ -1,18 +1,52 @@
 class HomeController < ApplicationController
 
       def index
-      	  wallet = AriesWallet.new("mywallet")
-	  puts wallet
-	  puts wallet.create
-	  puts wallet.open
-	  puts wallet.close
-	  puts wallet.delete
-	  pool = AriesPool.new("mypool")
-	  puts pool
-	  puts pool.create
-	  puts pool.open
-	  puts pool.close
-	  puts pool.delete
+      end
+
+      def create
+      	  @did = "Hello world"
+	  @verkey = "Goodbye earth"
+      end
+
+      def lookup
+      	  @did = "Hello world"
+	  @verkey = "Goodbye earth"
+      end
+
+      def old_index
+      	  pool = AriesPool.new("POOLX1")
+	  pool.create
+	  pool.open
+
+	  wallet = AriesWallet.new("WALLET_STEWARD")
+	  wallet.create
+	  wallet.open
+	  steward_did = AriesDID.new()
+	  seed = AriesJson.to_string('{"seed":"000000000000000000000000Steward1"}')
+	  steward_did.create(wallet,seed)
+
+	  trustee_did = AriesDID.new()
+	  trustee_did.create(wallet,"{}")
+	  puts trustee_did.get_verkey
+
+	  otherWallet = AriesWallet.new("WALLETX1")
+	  otherWallet.create
+	  otherWallet.open
+
+	  nym = AriesDID.build_nym(steward_did,trustee_did)
+	  puts nym
+	  ssresult = steward_did.sign_and_submit_request(pool,wallet,nym)
+	  puts ssresult
+
+	  @verkey = pool.key_for_did(otherWallet,trustee_did)
+	  @trustee_verkey = trustee_did.get_verkey
+
+	  wallet.close
+	  wallet.delete
+	  otherWallet.close
+	  otherWallet.delete
+	  pool.close
+	  pool.delete
       end
 
 end
