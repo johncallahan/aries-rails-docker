@@ -63,6 +63,7 @@ RUN cargo install cargo-deb
 RUN gem install rails -v 5.2.0
 RUN gem install bundler
 #RUN apt-get install rpm -y
+RUN gem update --system
 
 # Add sovrin to sources.list
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CE7709D068DB5E88 && \
