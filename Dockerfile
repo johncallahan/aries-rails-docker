@@ -21,8 +21,8 @@ RUN apt-get update -y && apt-get install -y \
     git \
     curl \
     libffi-dev \
-    ruby \
-    ruby-dev \ 
+    ruby2.5 \
+    ruby2.5-dev \ 
     sudo \
     rubygems \
     libzmq5 \
