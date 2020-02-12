@@ -59,7 +59,7 @@ RUN cargo install cargo-deb
 
 # fpm for deb packaging of npm
 RUN gem install fpm
-RUN gem install rails -v 4.0.0
+RUN gem install rails -v 5.2.0
 RUN apt-get install rpm -y
 
 # Add sovrin to sources.list
