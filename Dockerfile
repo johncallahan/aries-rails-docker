@@ -22,6 +22,8 @@ RUN apt-get update -y && apt-get install -y \
     curl \
     libffi-dev \
     zlib1g-dev \
+    nodejs \
+    npm \
     ruby \
     ruby-dev \
     sudo \
