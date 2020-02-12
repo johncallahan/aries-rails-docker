@@ -73,8 +73,8 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CE7709D068DB5E88 &&
 #ARG LIBNULL_VER="1.6.7"
 
 RUN apt-get update && apt-get install -y \
-    libindy=1.11.0 \
-    libnullpay=1.11.0
+    libindy=1.11 \
+    libnullpay=1.11
 
 WORKDIR /
 
