@@ -1,6 +1,5 @@
 # Development
-#FROM ubuntu:16.04
-FROM ruby:2.5
+FROM ubuntu:18.04
 
 # JRE installation and gcc
 RUN apt-get update -y && apt-get install -y \
@@ -22,6 +21,8 @@ RUN apt-get update -y && apt-get install -y \
     git \
     curl \
     libffi-dev \
+    ruby \
+    ruby-dev \
     sudo \
     rubygems \
     libzmq5 \
