@@ -2,8 +2,6 @@
 #FROM ubuntu:16.04
 FROM ruby:2.5
 
-RUN add-apt-repository ppa:brightbox/ruby-ng
-
 # JRE installation and gcc
 RUN apt-get update -y && apt-get install -y \
     gcc \
@@ -24,8 +22,6 @@ RUN apt-get update -y && apt-get install -y \
     git \
     curl \
     libffi-dev \
-    ruby2.5 \
-    ruby2.5-dev \ 
     sudo \
     rubygems \
     libzmq5 \
