@@ -1,7 +1,7 @@
 # Development
 FROM ubuntu:16.04
 
-RUN apt-add-repository ppa:brightbox/ruby-ng
+RUN add-apt-repository ppa:brightbox/ruby-ng
 
 # JRE installation and gcc
 RUN apt-get update -y && apt-get install -y \
