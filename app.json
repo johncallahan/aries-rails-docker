@@ -1,0 +1,15 @@
+{
+  "name": "Aries Rails Demo",
+  "description": "Hyperledger Aries Rails Docker Demo",
+  "repository": "https://github.com/johncallahan/aries-rails-docker",
+  "keywords": [
+    "aries", "hyperledger", "rails", "docker"
+  ],
+  "success_url": "/",
+  "env": {
+    "TEST_POOL_IP": {
+      "description": "The IP address of a ledger node",
+      "value": ""
+    }
+  }
+}
