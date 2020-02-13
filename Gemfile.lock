@@ -43,7 +43,7 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (9.0.0)
-    aries-sdk-ruby (0.0.8)
+    aries-sdk-ruby (0.0.9)
       helix_runtime (~> 0.7.5)
     builder (3.2.4)
     coffee-rails (5.0.0)
@@ -153,7 +153,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  aries-sdk-ruby (= 0.0.8)
+  aries-sdk-ruby (= 0.0.9)
   coffee-rails
   jbuilder
   jquery-rails

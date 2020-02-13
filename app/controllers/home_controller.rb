@@ -4,16 +4,6 @@ class HomeController < ApplicationController
       end
 
       def create
-      	  @did = "Hello world"
-	  @verkey = "Goodbye earth"
-      end
-
-      def lookup
-      	  @did = "Hello world"
-	  @verkey = "Goodbye earth"
-      end
-
-      def old_index
       	  pool = AriesPool.new("POOLX1")
 	  pool.create
 	  pool.open
@@ -38,13 +28,32 @@ class HomeController < ApplicationController
 	  ssresult = steward_did.sign_and_submit_request(pool,wallet,nym)
 	  puts ssresult
 
-	  @verkey = pool.key_for_did(otherWallet,trustee_did)
-	  @trustee_verkey = trustee_did.get_verkey
+	  @did = trustee_did.get_did
+	  @verkey = trustee_did.get_verkey
 
 	  wallet.close
 	  wallet.delete
 	  otherWallet.close
 	  otherWallet.delete
+	  pool.close
+	  pool.delete
+      end
+
+      def lookup
+      	  @did = params[:lookup][:did]
+
+      	  pool = AriesPool.new("POOLX1")
+	  pool.create
+	  pool.open
+
+	  wallet = AriesWallet.new("WALLETX2")
+	  wallet.create
+	  wallet.open
+
+	  @verkey = pool.key_for_did(wallet,@did)
+
+	  wallet.close
+	  wallet.delete
 	  pool.close
 	  pool.delete
       end

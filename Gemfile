@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '5.2.0'
 
-gem 'aries-sdk-ruby', '= 0.0.8'
+gem 'aries-sdk-ruby', '= 0.0.9'
 
 # Use SCSS for stylesheets
 gem 'sass-rails'

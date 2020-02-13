@@ -1,8 +1,8 @@
-<%= form_for :anything, url: "home/create" do |form| %>
+<%= form_for :generate, url: "home/create" do |form| %>
   <%= form.submit "Generate" %>
 <% end  %>
 
-<%= form_for :anything, url: "home/lookup" do |form| %>
+<%= form_for :lookup, url: "home/lookup" do |form| %>
   <%= form.text_field :did %>
   <%= form.submit "Lookup" %>
 <% end  %>
