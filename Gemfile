@@ -8,6 +8,8 @@ gem 'aries-sdk-ruby', '= 0.0.8'
 # Use SCSS for stylesheets
 gem 'sass-rails'
 
+gem 'tzinfo-data'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
