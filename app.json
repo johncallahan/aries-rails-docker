@@ -6,6 +6,7 @@
     "aries", "hyperledger", "rails", "docker"
   ],
   "success_url": "/",
+  "stack": "container",
   "env": {
     "TEST_POOL_IP": {
       "description": "The IP address of a ledger node",
